@@ -26,7 +26,7 @@ const StoreContextProvider = (props) => {
         console.log(cartItems);
     },[cartItems])
 
-    const ContextValue = {
+    const contextValue = {
         food_list,
         cartItems,
         setCartItems,
@@ -34,7 +34,7 @@ const StoreContextProvider = (props) => {
         removeFromCart
     }
     
-    return (<StoreContext.Provider value ={ContextValue}>
+    return (<StoreContext.Provider value ={contextValue}>
             {props.children}
         </StoreContext.Provider>
         )
