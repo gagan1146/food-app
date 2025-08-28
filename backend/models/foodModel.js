@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-console.log("DB Connection State:", mongoose.connection.readyState); 
+// console.log("DB Connection State:", mongoose.connection.readyState); 
 
 const foodSchema = new mongoose.Schema({
     name: {type:String, required:true},

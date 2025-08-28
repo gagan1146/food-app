@@ -22,5 +22,3 @@ foodRouter.post("/remove",removeFood);
 
 
 export default foodRouter;
-
-// mongodb+srv://durgeshsinghchauhan974:<db_password>@cluster0.o1hpt.mongodb.net/?

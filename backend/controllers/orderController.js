@@ -77,7 +77,9 @@ const verifyOrder = async (req, res) => {
 // users orders for frontend
 const userOrder = async(req, res) => {
     try {
-        const orders = await orderModel.find({userId:req.body.userId})
+        console.log(req.user);
+        
+        const orders = await orderModel.find({userId:req.user._id})
         res.json({success:true, data:orders})
     } catch (error) {
         console.log(error);

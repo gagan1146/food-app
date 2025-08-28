@@ -77,4 +77,15 @@ const registerUser = async (req, res) => {
     }
 }
 
-export {loginUser, registerUser};
+const cartController = async(req,res)=>{
+    try {
+        let userData = await userModel.findById(req.user._id);
+        let cartData = await userData.cartData;
+        res.json({success:true, cartData})
+    } catch (error) {
+        console.log(error);
+        res.json({success:false, message:"Error"})
+    }
+}
+
+export {loginUser, registerUser,cartController};
