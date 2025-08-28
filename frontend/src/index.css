@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: Outfit;
   scroll-behavior: smooth;
+  /* background-color: green; */
 }
 body{
   min-height: 100vh;

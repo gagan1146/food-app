@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
 
 const LoginPopup = ({ setShowLogin }) => {
-    const { url, setToken } = useContext(StoreContext);
+    const { url, setToken, fetchFoodList,food_list } = useContext(StoreContext);
 
     const [currState, setCurrState] = useState("Login");
     const [data, setData] = useState({
@@ -40,6 +40,8 @@ const LoginPopup = ({ setShowLogin }) => {
             if (response.data.success) {
                 setToken(response.data.token);
                 localStorage.setItem("token", response.data.token);
+                // await loadCartData(response.data.token);
+                await fetchFoodList();
                 setShowLogin(false);
                 // alert("You're logged in.")
             } else {

@@ -7,6 +7,7 @@ import { assets } from '../../assets/assets';
 const MyOrders = () => {
   const { url, token } = useContext(StoreContext);
   const [data, setData] = useState([]);
+  console.log(token);
 
   // Fetch orders when token is available
   const fetchOrders = async () => {
